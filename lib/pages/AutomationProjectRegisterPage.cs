@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
 using OpenQA.Selenium;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectRegisterPage
+    public class AutomationProjectRegisterPage
     {
 
         private IWebDriver _driver;
@@ -19,6 +15,8 @@ namespace AutomationProjectTestFramework.lib.pages
 
         private IWebElement ErrorBox => this._driver.FindElement(By.Id("create_account_error"));
 
+        private IWebElement FormCheck => this._driver.FindElement(By.ClassName("form-group form-ok"));
+
 
         public AutomationProjectRegisterPage(IWebDriver driver)
         {
@@ -28,12 +26,23 @@ namespace AutomationProjectTestFramework.lib.pages
         public void InputEmail(string email)
         {
             EmailInput.SendKeys(email);
+            EmailInput.SendKeys(Keys.Tab);
         }
 
         public void GotoRegistrationPage()
         {
             _driver.Navigate().GoToUrl(_loginPageUrl);
 
+        }
+
+        public bool GoodEmailInput()
+        {
+            if (FormCheck.Enabled)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
