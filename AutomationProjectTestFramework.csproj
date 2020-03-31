@@ -126,10 +126,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConfigReader.cs" />
+    <Compile Include="lib\AutomatedProjectWebsite.cs" />
+    <Compile Include="lib\driver_config\SeleniumDriverConfig.cs" />
+    <Compile Include="lib\pages\AutomationProjectHomePage.cs" />
+    <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".vs\AutomationProjectTestFramework\v16\.suo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\AutomatedProjectTestFramework\v16\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
