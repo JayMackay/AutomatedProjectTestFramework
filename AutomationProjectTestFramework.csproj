@@ -139,6 +139,12 @@
     <None Include=".vs\AutomationProjectTestFramework\v16\.suo" />
     <None Include=".vs\ProjectSettings.json" />
     <None Include=".vs\slnx.sqlite" />
+    <Compile Include="lib\pages\AutomationProjectMyAccountPage.cs" />
+    <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
