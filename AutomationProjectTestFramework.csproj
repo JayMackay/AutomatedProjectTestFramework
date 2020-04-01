@@ -131,6 +131,7 @@
     <Compile Include="lib\AutomatedProjectWebsite.cs" />
     <Compile Include="lib\driver_config\SeleniumDriverConfig.cs" />
     <Compile Include="lib\pages\AutomationPracticeDressPage.cs" />
+    <Compile Include="lib\pages\AutomationPracticePaymentMethod.cs" />
     <Compile Include="lib\pages\AutomationProjectHomePage.cs" />
     <Compile Include="lib\pages\AutomationProjectRegisterPage.cs" />
     <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
