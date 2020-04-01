@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
-using  AutomationProjectTestFramework.lib;
+using AutomationProjectTestFramework.lib;
 using AutomationProjectTestFramework.lib.pages;
 using OpenQA.Selenium;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;

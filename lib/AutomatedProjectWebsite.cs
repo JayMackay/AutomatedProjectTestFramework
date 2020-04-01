@@ -25,4 +25,5 @@ namespace AutomationProjectTestFramework.lib
             AutomationProjectRegisterPage = new AutomationProjectRegisterPage(seleniumDriver);
         }
     }
+
 }
