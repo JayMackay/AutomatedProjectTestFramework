@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,9 @@ namespace AutomationProjectTestFramework.lib.pages
         private IWebElement ContinueShoppingButton => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php"));
 
         //AGREE TERMS OF SERVICE
-        private IWebElement ContinueShoppingButton => this._driver.FindElement(By.Class("Clicked"));
+        private IWebElement TermsOfServiceCheckBox => this._driver.FindElement(By.Id("cgv"));
 
-        public AutomationProjectShoppingCartPage(IWebDriver driver)
+        public AutomationProjectShippingPage(IWebDriver driver)
         {
             _driver = driver;
         }

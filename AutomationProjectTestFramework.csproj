@@ -134,6 +134,7 @@
     <Compile Include="lib\pages\AutomationProjectPaymentMethod.cs" />
     <Compile Include="lib\pages\AutomationProjectHomePage.cs" />
     <Compile Include="lib\pages\AutomationProjectRegisterPage.cs" />
+    <Compile Include="lib\pages\AutomationProjectShippingPage.cs" />
     <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
     <Compile Include="lib\pages\AutomationProjectSignInPage.cs" />
     <Compile Include="Tests\SampleRegisterTest.cs" />
