@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Threading;
 using OpenQA.Selenium;
 
 namespace AutomationProjectTestFramework.lib.pages
@@ -15,7 +16,7 @@ namespace AutomationProjectTestFramework.lib.pages
 
         private IWebElement ErrorBox => this._driver.FindElement(By.Id("create_account_error"));
 
-        private IWebElement FormCheck => this._driver.FindElement(By.ClassName("form-group form-ok"));
+        private IWebElement FormCheck => this._driver.FindElement(By.XPath("//div[@class='form-group form-ok']"));
 
 
         public AutomationProjectRegisterPage(IWebDriver driver)
@@ -26,6 +27,7 @@ namespace AutomationProjectTestFramework.lib.pages
         public void InputEmail(string email)
         {
             EmailInput.SendKeys(email);
+            Thread.Sleep(100);
             EmailInput.SendKeys(Keys.Tab);
         }
 
