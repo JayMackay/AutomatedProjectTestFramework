@@ -28,13 +28,13 @@ namespace AutomationProjectTestFramework.Tests
             RegisterPage.AutomationProjectRegisterPage.GotoRegistrationPage();
 
             RegisterPage.AutomationProjectRegisterPage.InputEmail("thisemail@website.com");
-            
+
 
             //TODO
-            Assert.AreEqual(1,1);
+            // Assert.AreEqual(1,1);
 
 
-            //Assert.AreEqual(true, RegisterPage.AutomationProjectRegisterPage.GoodEmailInput());
+            Assert.AreEqual(true, RegisterPage.AutomationProjectRegisterPage.GoodEmailInput());
         }
 
     }
