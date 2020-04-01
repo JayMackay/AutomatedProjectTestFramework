@@ -143,7 +143,6 @@
     <None Include=".vs\ProjectSettings.json" />
     <None Include=".vs\slnx.sqlite" />
     <Compile Include="lib\pages\AutomationProjectMyAccountPage.cs" />
-    <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
