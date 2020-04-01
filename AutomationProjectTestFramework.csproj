@@ -131,9 +131,13 @@
     <Compile Include="lib\AutomatedProjectWebsite.cs" />
     <Compile Include="lib\driver_config\SeleniumDriverConfig.cs" />
     <Compile Include="lib\pages\AutomationProjectHomePage.cs" />
+
+    <Compile Include="lib\pages\AutomationProjectRegisterPage.cs" />
     <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
     <Compile Include="lib\pages\AutomationProjectSignInPage.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\SampleRegisterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".vs\AutomationProjectTestFramework\v16\.suo" />

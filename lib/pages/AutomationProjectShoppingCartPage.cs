@@ -2,7 +2,7 @@
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectShoppingCartPage
+    public class AutomationProjectShoppingCartPage
     {
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;

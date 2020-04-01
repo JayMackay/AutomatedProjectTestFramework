@@ -4,16 +4,16 @@ using System.Collections.Generic;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectHomePage
+    public class AutomationProjectHomePage
     {
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;
 
-        //SHOPPING CART NAVIGATION
-        private IWebElement ShoppingCartButton => this._driver.FindElement(By.ClassName("shopping_cart"));
 
         //LOGIN NAVIGATION
         private IWebElement SignInButton => this._driver.FindElement(By.ClassName("login"));
+
+       
 
         public AutomationProjectHomePage(IWebDriver driver)
         {
@@ -29,5 +29,6 @@ namespace AutomationProjectTestFramework.lib.pages
         {
             SignInButton.Click();
         }
+
     }
 }

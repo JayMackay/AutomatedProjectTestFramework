@@ -7,5 +7,6 @@ namespace AutomationProjectTestFramework
     {
         public static readonly string BaseUrl = ConfigurationManager.AppSettings["base_url"];
         public static readonly string ShoppingCartUrl = ConfigurationManager.AppSettings["shoppingcart_url"];
+        public static readonly string LoginUrl = ConfigurationManager.AppSettings["login_url"];
     }
 }
