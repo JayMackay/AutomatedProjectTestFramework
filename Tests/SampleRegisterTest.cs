@@ -21,6 +21,7 @@ namespace AutomationProjectTestFramework.Tests
         {
             RegisterPage.AutomationProjectRegister.GotoRegistrationPage();
             RegisterPage.AutomationProjectRegister.InputEmail("thisemail@website.com");
+            RegisterPage.AutomationProjectRegister.Clickoff();
 
             Assert.AreEqual(true, RegisterPage.AutomationProjectRegister.GoodEmailInput());
             CleanUp();
