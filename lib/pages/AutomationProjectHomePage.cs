@@ -30,9 +30,10 @@ namespace AutomationProjectTestFramework.lib.pages
             SignInButton.Click();
         }
 
-        public void SearchFunctionality(string query)
+        public void SearchFunctionality(string product)
         {
-            SearchBar.SendKeys(query);
+            SearchBar.SendKeys(product);
+            SearchBar.Submit();
         }
     }
 }

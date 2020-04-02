@@ -8,7 +8,7 @@ namespace AutomationProjectTestFramework.lib.pages
         private string _homePageUrl = AppConfigReader.BaseUrl;
 
         //CONFIRM ORDER BUTTON
-        private IWebElement ConfirmOrderButton => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?controller=order&amp;step=3"));
+        private IWebElement ConfirmOrderButton => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div/form/p/button/span"));
 
         public AutomationProjectOrderSummaryPage(IWebDriver driver)
         {
@@ -20,7 +20,7 @@ namespace AutomationProjectTestFramework.lib.pages
             _driver.Navigate().GoToUrl(_homePageUrl);
         }
 
-        public void ClickConfirmOrderLink()
+        public void ClickConfirmOrder()
         {
             ConfirmOrderButton.Click();
         }

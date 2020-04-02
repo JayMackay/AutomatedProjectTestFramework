@@ -128,8 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
-    <Compile Include="BDD\SteppingFunctions\RegistrationsSteps.cs" />
-    <Compile Include="BDD\SteppingFunctions\SearchFunctionalityTestSteps.cs" />
+    <Compile Include="BDD\SteppingFunctions\OrderCompletionSteps.cs" />
     <Compile Include="lib\AutomatedProjectWebsite.cs" />
     <Compile Include="lib\driver_config\SeleniumDriverConfig.cs" />
     <Compile Include="lib\pages\AutomationProjectAddressPage.cs" />
@@ -141,19 +140,18 @@
     <Compile Include="lib\pages\AutomationProjectShippingPage.cs" />
     <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
     <Compile Include="lib\pages\AutomationProjectSignInPage.cs" />
-    <Compile Include="Tests\SampleRegisterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="lib\pages\AutomationProjectMyAccountPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="BDD\Gherkin\RegistrationInputTest.feature" />
-    <None Include="BDD\Gherkin\SearchFunctionalityTest.feature" />
+    <None Include="BDD\Gherkin\OrderCompletionTest.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

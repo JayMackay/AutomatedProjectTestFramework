@@ -10,16 +10,17 @@ namespace AutomationProjectTestFramework.lib.pages
     public class AutomationProjectAddressPage
     {
         private IWebDriver _driver;
-        private IWebElement ProceedToCheckout => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?controller=order&step=1"));
+
+        private IWebElement _proceedToCheckout => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div/form/p/button/span"));
 
         public AutomationProjectAddressPage(IWebDriver driver)
         {
             _driver = driver;
         }
 
-        private void ClickProceedToCheckout()
+        public void ClickProceedToCheckout()
         {
-            ProceedToCheckout.Click();
+            _proceedToCheckout.Click();
         }
     }
 }
