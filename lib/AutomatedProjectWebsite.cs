@@ -5,9 +5,11 @@ using OpenQA.Selenium;
 namespace AutomationProjectTestFramework.lib
 {
     //Service object for all website pages
-    public class AutomationProjectWebsite
+    public class AutomatedProjectWebsite
     {
         //Accessible read only page objects
+
+
         public readonly AutomationProjectHomePage AutomationProjectHomePage;
         public readonly AutomationProjectShoppingCartPage AutomationProjectShoppingCartPage;
         public readonly AutomationProjectRegisterPage AutomationProjectRegisterPage;
@@ -21,12 +23,13 @@ namespace AutomationProjectTestFramework.lib
         public readonly IWebDriver seleniumDriver;
 
         //Constructor for driver and config for the service
-        public AutomationProjectWebsite(string drivername, int pageLoadWaitInSecs = 10, int implicitWaitTimeInSecs = 10)
+        public AutomatedProjectWebsite(string drivername, int pageLoadWaitInSecs = 10, int implicitWaitTimeInSecs = 10)
         {
             //Instantiation of driver
             seleniumDriver = new SeleniumDriverConfig(drivername, pageLoadWaitInSecs, implicitWaitTimeInSecs).Driver;
 
             //Instantiation of page objects with the selenium driver
+
             AutomationProjectHomePage = new AutomationProjectHomePage(seleniumDriver);
             AutomationProjectShoppingCartPage = new AutomationProjectShoppingCartPage(seleniumDriver);
             AutomationProjectRegisterPage = new AutomationProjectRegisterPage(seleniumDriver);
@@ -38,6 +41,7 @@ namespace AutomationProjectTestFramework.lib
             AutomationProjectSignInPage = new AutomationProjectSignInPage(seleniumDriver);
             AutomationProjectPaymentMethod = new AutomationProjectPaymentMethod(seleniumDriver);
             AutomationProjectShippingPage = new AutomationProjectShippingPage(seleniumDriver);
+
 
         }
     }
