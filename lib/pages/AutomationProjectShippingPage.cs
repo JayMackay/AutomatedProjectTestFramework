@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectShippingPage
+    public class AutomationProjectShippingPage
     {
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;

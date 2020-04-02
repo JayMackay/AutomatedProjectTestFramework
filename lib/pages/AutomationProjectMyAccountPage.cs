@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectMyAccountPage
+    public class AutomationProjectMyAccountPage
     {
         private IWebDriver _driver;
         public AutomationProjectMyAccountPage(IWebDriver driver)

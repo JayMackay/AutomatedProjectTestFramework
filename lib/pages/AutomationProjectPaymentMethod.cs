@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectPaymentMethod
+    public class AutomationProjectPaymentMethod
     {
         private IWebDriver _driver;
         public AutomationProjectPaymentMethod(IWebDriver driver)
