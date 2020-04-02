@@ -29,6 +29,7 @@ namespace AutomationProjectTestFramework
             _automation.AutomationProjectShipping.ConfirmTermsOfService();
             _automation.AutomationProjectShipping.ClickProceedToCheckOutLink();
             _automation.AutomationProjectPaymentMethod.PayByBankWire();
+
         }
 
         [When(@"I press I Confirm My Order")]
@@ -40,6 +41,14 @@ namespace AutomationProjectTestFramework
         [Then(@"I am redirected to the Order Confirmation Page")]
         public void ThenIAmRedirectedToTheOrderConfirmationPage()
         {
+            Assert.That(_automation.automationProjectConfirmation.ConfirmOrderConfirmationMessage,
+                Is.EqualTo("Your order on My Store is complete."));
+
+        }
+        [AfterScenario()]
+        public void DisposeWebDriver()
+        {
+            _automation.seleniumDriver.Dispose();
         }
     }
 }
