@@ -35,6 +35,13 @@ namespace AutomationProjectTestFramework.Tests
 
 
             Assert.AreEqual(true, RegisterPage.AutomationProjectRegisterPage.GoodEmailInput());
+            CleanUp();
+        }
+
+        [TearDown]
+        public void CleanUp()
+        {
+            RegisterPage.seleniumDriver.Quit();
         }
 
     }

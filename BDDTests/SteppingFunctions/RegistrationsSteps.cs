@@ -25,13 +25,20 @@ namespace AutomationProjectTestFramework.BDDTests
         [When(@"i click off")]
         public void WhenIClickOff()
         {
-            //behavior done be default
+            _automation.AutomationProjectRegisterPage.Clickoff();
         }
 
         [Then(@"the result should see a green check mark in the box")]
         public void ThenTheResultShouldSeeAGreenCheckMarkInTheBox()
         {
             Assert.AreEqual(true, _automation.AutomationProjectRegisterPage.GoodEmailInput());
+        }
+
+        [AfterScenario()]
+        public void DisposeWebDriver()
+        {
+            _automation.seleniumDriver.Dispose();
+            _automation.seleniumDriver.Quit();
         }
     }
 }
