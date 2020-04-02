@@ -353,3 +353,4 @@ MigrationBackup/
 
 # End of https://www.gitignore.io/api/visualstudio
 /BDDTests/Gerkin/SearchFunctionalityTest.feature.cs
+/.idea/.idea.AutomationProjectTestFramework
