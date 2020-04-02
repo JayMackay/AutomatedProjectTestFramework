@@ -18,7 +18,7 @@ namespace AutomationProjectTestFramework.lib.pages
         private IWebElement CheckTransfer => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?fc=module&amp;module=cheque&amp;controller=payment"));
         private void PayByBankWire()
         {
-            CheckTransfer.Click();
+            BankWireTransfer.Click();
         }
         private void PayByCheck()
         {
