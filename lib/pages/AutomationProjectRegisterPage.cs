@@ -38,7 +38,6 @@ namespace AutomationProjectTestFramework.lib.pages
             _driver.Navigate().GoToUrl(_loginPageUrl);
 
         }
-
         public bool GoodEmailInput()
         {
             if (FormCheck.Enabled)
