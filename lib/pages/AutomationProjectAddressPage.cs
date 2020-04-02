@@ -17,7 +17,7 @@ namespace AutomationProjectTestFramework.lib.pages
             _driver = driver;
         }
 
-        private void ClickProceedToCheckout()
+        public void ClickProceedToCheckout()
         {
             ProceedToCheckout.Click();
         }

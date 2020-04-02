@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
+    <Compile Include="BDD\SteppingFunctions\PaymentMethodSteps.cs" />
     <Compile Include="BDD\SteppingFunctions\RegistrationsSteps.cs" />
     <Compile Include="BDD\SteppingFunctions\SearchFunctionalityTestSteps.cs" />
     <Compile Include="lib\AutomatedProjectWebsite.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="lib\pages\AutomationProjectShippingPage.cs" />
     <Compile Include="lib\pages\AutomationProjectShoppingCartPage.cs" />
     <Compile Include="lib\pages\AutomationProjectSignInPage.cs" />
+    <Compile Include="BDD\SteppingFunctions\OrderCompletionSteps.cs" />
     <Compile Include="Tests\SampleRegisterTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="BDD\Gherkin\OrderCompletion.feature" />
+    <None Include="BDD\Gherkin\PaymentMethod.feature" />
     <None Include="BDD\Gherkin\RegistrationInputTest.feature" />
     <None Include="BDD\Gherkin\SearchFunctionalityTest.feature" />
     <None Include="packages.config" />

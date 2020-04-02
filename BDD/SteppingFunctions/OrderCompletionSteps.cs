@@ -4,14 +4,14 @@ using AutomationProjectTestFramework.lib;
 using TechTalk.SpecFlow;
 using System.Configuration;
 
-namespace AutomationProjectTestFramework.BDD.SteppingFunctions
+namespace AutomationProjectTestFramework
 {
     [Binding]
-    public class PaymentMethodSteps
+    public class OrderCompletionSteps
     {
         private AutomatedProjectWebsite _automation;
-        [Given(@"I am on the payment method page")]
-        public void GivenIAmOnThePaymentMethodPage()
+        [Given(@"I am on the Order Summary Page")]
+        public void GivenIAmOnTheOrderSummaryPage()
         {
             _automation = new AutomatedProjectWebsite("chrome");
             _automation.AutomationProjectHome.VisitHomePage();
@@ -24,18 +24,20 @@ namespace AutomationProjectTestFramework.BDD.SteppingFunctions
             _automation.AutomationProjectShoppingCart.ClickProceedToCheckOutLink();
             _automation.AutomationProjectAddress.ClickProceedToCheckout();
             _automation.AutomationProjectShipping.ClickProceedToCheckOutLink();
-        }
-        
-        [When(@"I press Pay By Bank Wire")]
-        public void WhenIPressPayByBankWire()
-        {
             _automation.AutomationProjectPaymentMethod.PayByBankWire();
+
         }
         
-        [Then(@"I should be on the Order Summary page")]
-        public void ThenIShouldBeOnTheOrderSummaryPage()
+        [When(@"I press I Confirm My Order")]
+        public void WhenIPressIConfirmMyOrder()
         {
-            ScenarioContext.Current.Pending();
+            _automation.AutomationProjectOrderSummary.ClickConfirmOrderLink();
+        }
+        
+        [Then(@"I am redirected to the Order Confirmation Page")]
+        public void ThenIAmRedirectedToTheOrderConfirmationPage()
+        {
+            
         }
     }
 }

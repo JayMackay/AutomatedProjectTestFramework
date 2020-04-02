@@ -33,6 +33,7 @@ namespace AutomationProjectTestFramework.lib.pages
 
         public void ClickProceedToCheckOutLink()
         {
+            TermsOfServiceCheckBox.Click();
             ProceedTocheckoutButton.Click();
         }
     }
