@@ -27,6 +27,11 @@ namespace AutomationProjectTestFramework.lib.pages
         public void InputEmail(string email)
         {
             EmailInput.SendKeys(email);
+            
+        }
+
+        public void Clickoff()
+        {
             Thread.Sleep(100);
             EmailInput.SendKeys(Keys.Tab);
         }
