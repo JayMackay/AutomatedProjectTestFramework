@@ -128,8 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
-    <Compile Include="BDDTests\SteppingFunctions\RegistrationsSteps.cs" />
-    <Compile Include="BDDTests\SteppingFunctions\SearchFunctionalityTestSteps.cs" />
+    <Compile Include="BDD\SteppingFunctions\RegistrationsSteps.cs" />
+    <Compile Include="BDD\SteppingFunctions\SearchFunctionalityTestSteps.cs" />
     <Compile Include="lib\AutomatedProjectWebsite.cs" />
     <Compile Include="lib\driver_config\SeleniumDriverConfig.cs" />
     <Compile Include="lib\pages\AutomationProjectAddressPage.cs" />
@@ -148,8 +148,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="BDDTests\Gerkin\RegistrationInputTest.feature" />
-    <None Include="BDDTests\Gerkin\SearchFunctionalityTest.feature" />
+    <None Include="BDD\Gherkin\RegistrationInputTest.feature" />
+    <None Include="BDD\Gherkin\SearchFunctionalityTest.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
