@@ -16,8 +16,6 @@ namespace AutomationProjectTestFramework.lib.pages
         //SEARCH FUNCTIONALITY
         private IWebElement SearchBar => this._driver.FindElement(By.Id("search_query_top"));
 
-
-
         public AutomationProjectHomePage(IWebDriver driver)
         {
             _driver = driver;
