@@ -9,7 +9,6 @@ namespace AutomationProjectTestFramework.lib.pages
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;
 
-
         //LOGIN NAVIGATION
         private IWebElement SignInButton => this._driver.FindElement(By.ClassName("login"));
 
