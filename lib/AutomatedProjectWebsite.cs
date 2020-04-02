@@ -8,9 +8,16 @@ namespace AutomationProjectTestFramework.lib
     public class AutomationProjectWebsite
     {
         //Accessible read only page objects
-        public readonly AutomationProjectHomePage AutomationProjectHome;
-        public readonly AutomationProjectShoppingCartPage AutomationProjectShoppingCart;
+        public readonly AutomationProjectHomePage AutomationProjectHomePage;
+        public readonly AutomationProjectShoppingCartPage AutomationProjectShoppingCartPage;
         public readonly AutomationProjectRegisterPage AutomationProjectRegisterPage;
+        public readonly AutomationProjectAddressPage AutomationProjectAddressPage;
+        public readonly AutomationProjectDressPage AutomationProjectDressPage;
+        public readonly AutomationProjectMyAccountPage AutomationProjectMyAccountPage;
+        public readonly AutomationProjectOrderSummaryPage AutomationProjectOrderSummaryPage;
+        public readonly AutomationProjectSignInPage AutomationProjectSignInPage;
+        public readonly AutomationProjectPaymentMethod AutomationProjectPaymentMethod;
+        public readonly AutomationProjectShippingPage AutomationProjectShippingPage;
         public readonly IWebDriver seleniumDriver;
 
         //Constructor for driver and config for the service
@@ -20,9 +27,18 @@ namespace AutomationProjectTestFramework.lib
             seleniumDriver = new SeleniumDriverConfig(drivername, pageLoadWaitInSecs, implicitWaitTimeInSecs).Driver;
 
             //Instantiation of page objects with the selenium driver
-            AutomationProjectHome = new AutomationProjectHomePage(seleniumDriver);
-            AutomationProjectShoppingCart = new AutomationProjectShoppingCartPage(seleniumDriver);
+            AutomationProjectHomePage = new AutomationProjectHomePage(seleniumDriver);
+            AutomationProjectShoppingCartPage = new AutomationProjectShoppingCartPage(seleniumDriver);
             AutomationProjectRegisterPage = new AutomationProjectRegisterPage(seleniumDriver);
+            AutomationProjectAddressPage = new AutomationProjectAddressPage(seleniumDriver);
+            AutomationProjectDressPage = new AutomationProjectDressPage(seleniumDriver);
+            AutomationProjectMyAccountPage = new AutomationProjectMyAccountPage(seleniumDriver);
+            AutomationProjectOrderSummaryPage = new AutomationProjectOrderSummaryPage(seleniumDriver);
+            AutomationProjectRegisterPage = new AutomationProjectRegisterPage(seleniumDriver);
+            AutomationProjectSignInPage = new AutomationProjectSignInPage(seleniumDriver);
+            AutomationProjectPaymentMethod = new AutomationProjectPaymentMethod(seleniumDriver);
+            AutomationProjectShippingPage = new AutomationProjectShippingPage(seleniumDriver);
+
         }
     }
 
