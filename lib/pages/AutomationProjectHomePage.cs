@@ -13,7 +13,10 @@ namespace AutomationProjectTestFramework.lib.pages
         //LOGIN NAVIGATION
         private IWebElement SignInButton => this._driver.FindElement(By.ClassName("login"));
 
-       
+        //SEARCH FUNCTIONALITY
+        private IWebElement SearchBar => this._driver.FindElement(By.Id("search_query_top"));
+
+
 
         public AutomationProjectHomePage(IWebDriver driver)
         {
@@ -30,5 +33,9 @@ namespace AutomationProjectTestFramework.lib.pages
             SignInButton.Click();
         }
 
+        public void SearchFunctionality(string query)
+        {
+            SearchBar.SendKeys(query);
+        }
     }
 }
