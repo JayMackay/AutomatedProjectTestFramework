@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectSignInPage
+    public class AutomationProjectSignInPage
     {
         private IWebDriver _driver;
         private IWebElement usernameField => _driver.FindElement(By.Id("email"));
@@ -18,15 +18,16 @@ namespace AutomationProjectTestFramework.lib.pages
         {
             _driver = driver;
         }
+
         private void EnterValidEmail(string email)
         {
             usernameField.SendKeys(email);
         }
+
         private void EnterValidPassword(string password)
         {
             passwordField.SendKeys(password);
             passwordField.Submit();
         }
     }
-
 }

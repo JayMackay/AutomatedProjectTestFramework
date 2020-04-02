@@ -1,41 +1,35 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using AutomationProjectTestFramework.lib;
-using AutomationProjectTestFramework.lib.pages;
-using OpenQA.Selenium;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace AutomationProjectTestFramework.Tests
 {
     [TestFixture]
-    // [Parallelizable(ParallelScope.Self)]
     public class SampleRegisterTest
     {
-        // Instantiate the page objects, include all functionality for the web pages
-        // will see that later
-        public AutomationProjectWebsite RegisterPage; //= new BbcWebsite("chrome");
+        //Instantiate the page objects, include all functionality for the web pages
+        public AutomatedProjectWebsite RegisterPage;
 
         [SetUp]
         public void SetUp()
         {
-            RegisterPage = new AutomationProjectWebsite("chrome");
+            RegisterPage = new AutomatedProjectWebsite("chrome");
         }
 
         [Test]
         public void EnterCorrectDetailsForLogin()
         {
-            RegisterPage.AutomationProjectRegisterPage.GotoRegistrationPage();
+            RegisterPage.AutomationProjectRegister.GotoRegistrationPage();
+            RegisterPage.AutomationProjectRegister.InputEmail("thisemail@website.com");
 
-            RegisterPage.AutomationProjectRegisterPage.InputEmail("thisemail@website.com");
-
-
-            //TODO
-            // Assert.AreEqual(1,1);
-
-
-            Assert.AreEqual(true, RegisterPage.AutomationProjectRegisterPage.GoodEmailInput());
+            Assert.AreEqual(true, RegisterPage.AutomationProjectRegister.GoodEmailInput());
+            CleanUp();
         }
 
+        [TearDown]
+        public void CleanUp()
+        {
+            RegisterPage.seleniumDriver.Quit();
+        }
     }
 }

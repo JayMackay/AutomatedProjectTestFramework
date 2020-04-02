@@ -2,7 +2,7 @@
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectOrderSummaryPage
+   public class AutomationProjectOrderSummaryPage
     {
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;

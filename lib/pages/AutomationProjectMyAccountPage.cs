@@ -7,14 +7,16 @@ using OpenQA.Selenium;
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectMyAccountPage
+    public class AutomationProjectMyAccountPage
     {
         private IWebDriver _driver;
+        private IWebElement _searchBar => this._driver.FindElement(By.Id("search_query_top"));
+
         public AutomationProjectMyAccountPage(IWebDriver driver)
         {
             _driver = driver;
         }
-        private IWebElement _searchBar => this._driver.FindElement(By.Id("search_query_top"));
+
         private void SearchProduct(string product)
         {
             _searchBar.SendKeys(product);
