@@ -19,12 +19,12 @@ namespace AutomationProjectTestFramework.lib.pages
             _driver = driver;
         }
         
-        public void AddProduct()
+        private void AddProduct()
         {
             AddToCart.Click();
         }
 
-        public void ProceedToCart()
+        private void ProceedToCart()
         {
             ViewCart.Click();
         }
