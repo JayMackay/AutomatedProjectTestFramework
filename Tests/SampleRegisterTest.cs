@@ -14,27 +14,27 @@ namespace AutomationProjectTestFramework.Tests
     {
         // Instantiate the page objects, include all functionality for the web pages
         // will see that later
-        public AutomationProjectWebsite RegisterPage; //= new BbcWebsite("chrome");
+        public AutomatedProjectWebsite RegisterPage; //= new BbcWebsite("chrome");
 
         [SetUp]
         public void SetUp()
         {
-            RegisterPage = new AutomationProjectWebsite("chrome");
+            RegisterPage = new AutomatedProjectWebsite("chrome");
         }
 
         [Test]
         public void EnterCorrectDetailsForLogin()
         {
-            RegisterPage.AutomationProjectRegisterPage.GotoRegistrationPage();
+            RegisterPage.AutomationProjectHomePage.GotoRegistrationPage();
 
-            RegisterPage.AutomationProjectRegisterPage.InputEmail("thisemail@website.com");
+            RegisterPage.AutomationProjectHomePage.InputEmail("thisemail@website.com");
 
 
             //TODO
             // Assert.AreEqual(1,1);
 
 
-            Assert.AreEqual(true, RegisterPage.AutomationProjectRegisterPage.GoodEmailInput());
+            Assert.AreEqual(true, RegisterPage.AutomationProjectHomePage.GoodEmailInput());
             CleanUp();
         }
 
