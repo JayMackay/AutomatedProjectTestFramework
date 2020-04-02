@@ -135,7 +135,7 @@
     <Compile Include="lib\pages\AutomationProjectAddressPage.cs" />
     <Compile Include="lib\pages\AutomationProjectDressPage.cs" />
     <Compile Include="lib\pages\AutomationProjectOrderSummaryPage.cs" />
-    <Compile Include="lib\pages\AutomationProjectPaymentMethod.cs" />
+    <Compile Include="lib\pages\AutomationProjectPaymentMethodPage.cs" />
     <Compile Include="lib\pages\AutomationProjectHomePage.cs" />
     <Compile Include="lib\pages\AutomationProjectRegisterPage.cs" />
     <Compile Include="lib\pages\AutomationProjectShippingPage.cs" />

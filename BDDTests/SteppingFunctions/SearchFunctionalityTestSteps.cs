@@ -20,13 +20,13 @@ namespace AutomationProjectTestFramework.BDDTests.SteppingFunctions
         [Given(@"I have entered ""(.*)"" into the search bar")]
         public void GivenIHaveEnteredIntoTheSearchBar(string dress)
         {
-            _automation.AutomationProjectHome.SearchFunctionality();
+            _automation.AutomationProjectHome.SearchFunctionality(dress);
         }
         
         [When(@"I press enter")]
         public void WhenIPressEnter()
         {
-            _bbcWebsite.bbcLoginPage.ClickSubmit();
+          
         }
         
         [Then(@"a new page with the results should be displayed")]
