@@ -11,8 +11,8 @@ namespace AutomationProjectTestFramework.lib.pages
     {
         private IWebDriver _driver;
 
-        private IWebElement AddToCart => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?controller=cart&amp;add=1&amp;id_product=5&amp;token=1f3ac3c3a3091ee5c3d0cd5ca0301c43"));
-        private IWebElement ViewCart => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?controller=order"));
+        private IWebElement AddToCart => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/div[2]/a[1]/span"));
+        private IWebElement ProceedToCheckout => this._driver.FindElement(By.XPath("/html/body/div[1]/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
 
         public AutomationProjectDressPage(IWebDriver driver)
         {
@@ -26,7 +26,7 @@ namespace AutomationProjectTestFramework.lib.pages
 
         private void ProceedToCart()
         {
-            ViewCart.Click();
+            ProceedToCheckout.Click();
         }
     }
 }

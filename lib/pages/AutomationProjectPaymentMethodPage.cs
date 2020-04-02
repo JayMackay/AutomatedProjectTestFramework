@@ -11,8 +11,8 @@ namespace AutomationProjectTestFramework.lib.pages
     {
         private IWebDriver _driver;
 
-        private IWebElement BankWireTransfer => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?fc=module&amp;module=bankwire&amp;controller=payment"));
-        private IWebElement CheckTransfer => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?fc=module&amp;module=cheque&amp;controller=payment"));
+        private IWebElement _bankWireTransfer => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div/div/div[3]/div[1]/div/p/a"));
+        private IWebElement _checkTransfer => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?fc=module&amp;module=cheque&amp;controller=payment"));
 
         public AutomationProjectPaymentMethodPage(IWebDriver driver)
         {
@@ -21,12 +21,13 @@ namespace AutomationProjectTestFramework.lib.pages
         
         private void PayByBankWire()
         {
-            BankWireTransfer.Click();
+            _bankWireTransfer.Click();
         }
 
         private void PayByCheck()
         {
-            CheckTransfer.Click();
+            _checkTransfer.Click();
         }
     }
 }
+

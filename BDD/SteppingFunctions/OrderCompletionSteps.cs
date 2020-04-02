@@ -3,39 +3,43 @@ using NUnit.Framework;
 using AutomationProjectTestFramework.lib;
 using TechTalk.SpecFlow;
 using System.Configuration;
+using System.Threading;
 
-namespace AutomationProjectTestFramework.BDD.SteppingFunctions
+namespace AutomationProjectTestFramework
 {
     [Binding]
-    public class PaymentMethodSteps
+    public class OrderCompletionSteps
     {
         private AutomatedProjectWebsite _automation;
-        [Given(@"I am on the payment method page")]
-        public void GivenIAmOnThePaymentMethodPage()
+        [Given(@"I am on the Order Summary Page")]
+        public void GivenIAmOnTheOrderSummaryPage()
         {
             _automation = new AutomatedProjectWebsite("chrome");
             _automation.AutomationProjectHome.VisitHomePage();
             _automation.AutomationProjectHome.ClickSignInLink();
             _automation.AutomationProjectSignIn.EnterValidEmail("mitclork@mitclork.com");
             _automation.AutomationProjectSignIn.EnterValidPassword("mitclork");
+            _automation.AutomationProjectSignIn.ConfirmationButton();
+           Thread.Sleep(5000);
             _automation.AutomationProjectMyAccount.SearchProduct("dress");
             _automation.AutomationProjectDress.AddProduct();
             _automation.AutomationProjectDress.ProceedToCart();
             _automation.AutomationProjectShoppingCart.ClickProceedToCheckOutLink();
             _automation.AutomationProjectAddress.ClickProceedToCheckout();
+            _automation.AutomationProjectShipping.ConfirmTermsOfService();
             _automation.AutomationProjectShipping.ClickProceedToCheckOutLink();
-        }
-        
-        [When(@"I press Pay By Bank Wire")]
-        public void WhenIPressPayByBankWire()
-        {
             _automation.AutomationProjectPaymentMethod.PayByBankWire();
         }
-        
-        [Then(@"I should be on the Order Summary page")]
-        public void ThenIShouldBeOnTheOrderSummaryPage()
+
+        [When(@"I press I Confirm My Order")]
+        public void WhenIPressIConfirmMyOrder()
         {
-            ScenarioContext.Current.Pending();
+            _automation.AutomationProjectOrderSummary.ClickConfirmOrder();
+        }
+
+        [Then(@"I am redirected to the Order Confirmation Page")]
+        public void ThenIAmRedirectedToTheOrderConfirmationPage()
+        {
         }
     }
 }
