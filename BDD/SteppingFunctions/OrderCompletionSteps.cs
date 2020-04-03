@@ -20,7 +20,7 @@ namespace AutomationProjectTestFramework
             _automation.AutomationProjectSignIn.EnterValidEmail("mitclork@mitclork.com");
             _automation.AutomationProjectSignIn.EnterValidPassword("mitclork");
             _automation.AutomationProjectSignIn.ConfirmationButton();
-           Thread.Sleep(5000);
+            Thread.Sleep(5000);
             _automation.AutomationProjectMyAccount.SearchProduct("dress");
             _automation.AutomationProjectDress.AddProduct();
             _automation.AutomationProjectDress.ProceedToCart();

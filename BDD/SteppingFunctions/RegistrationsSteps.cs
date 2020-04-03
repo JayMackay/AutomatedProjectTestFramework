@@ -34,11 +34,11 @@ namespace AutomationProjectTestFramework.BDDTests
             Assert.AreEqual(true, _automation.AutomationProjectRegister.GoodEmailInput());
         }
 
-        [AfterScenario()]
-        public void DisposeWebDriver()
-        {
-            
-            _automation.seleniumDriver.Quit();
-        }
+        // [AfterScenario()]
+        // public void DisposeWebDriver()
+        // {
+        //     
+        //     _automation.seleniumDriver.Quit();
+        // }
     }
 }
