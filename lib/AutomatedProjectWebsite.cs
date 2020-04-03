@@ -18,7 +18,9 @@ namespace AutomationProjectTestFramework.lib
         public readonly AutomationProjectSignInPage AutomationProjectSignIn;
         public readonly AutomationProjectPaymentMethodPage AutomationProjectPaymentMethod;
         public readonly AutomationProjectShippingPage AutomationProjectShipping;
+        public readonly AutomationProjectConfirmationPage automationProjectConfirmation;
         public readonly IWebDriver seleniumDriver;
+
 
         //Constructor for driver and config for the service
         public AutomatedProjectWebsite(string drivername, int pageLoadWaitInSecs = 10, int implicitWaitTimeInSecs = 10)
@@ -38,6 +40,7 @@ namespace AutomationProjectTestFramework.lib
             AutomationProjectSignIn = new AutomationProjectSignInPage(seleniumDriver);
             AutomationProjectPaymentMethod = new AutomationProjectPaymentMethodPage(seleniumDriver);
             AutomationProjectShipping = new AutomationProjectShippingPage(seleniumDriver);
+            automationProjectConfirmation = new AutomationProjectConfirmationPage(seleniumDriver);
         }
     }
 
