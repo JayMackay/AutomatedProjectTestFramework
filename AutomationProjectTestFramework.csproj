@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
+    <Compile Include="BDD\SteppingFunctions\RegisterUserSteps.cs" />
     <Compile Include="BDD\SteppingFunctions\RegistrationsSteps.cs" />
     <Compile Include="BDD\SteppingFunctions\SearchFunctionalityTestSteps.cs" />
     <Compile Include="BDD\SteppingFunctions\OrderCompletionSteps.cs" />
@@ -152,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="BDD\Gherkin\RegisterUser.feature" />
     <None Include="BDD\Gherkin\RegistrationInputTest.feature" />
     <None Include="BDD\Gherkin\SearchFunctionalityTest.feature" />
     <None Include="BDD\Gherkin\OrderCompletionTest.feature" />
@@ -159,7 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

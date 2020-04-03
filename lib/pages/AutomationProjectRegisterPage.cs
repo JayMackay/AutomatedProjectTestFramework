@@ -24,9 +24,9 @@ namespace AutomationProjectTestFramework.lib.pages
         private IWebElement LastName => this._driver.FindElement(By.Id("customer_lastname"));
         private IWebElement Password => this._driver.FindElement(By.Id("passwd"));
 
-        private SelectElement Day => (SelectElement)this._driver.FindElement(By.Id("days"));
-        private SelectElement Month => (SelectElement)this._driver.FindElement(By.Id("uniform-months"));
-        private SelectElement Year => (SelectElement)this._driver.FindElement(By.Id("years"));
+        private IWebElement Day => this._driver.FindElement(By.Id("days"));
+        private IWebElement Month => this._driver.FindElement(By.Id("months"));
+        private IWebElement Year => this._driver.FindElement(By.Id("years"));
 
 
         private IWebElement FirstName => this._driver.FindElement(By.Id("firstname"));
@@ -35,17 +35,18 @@ namespace AutomationProjectTestFramework.lib.pages
         private IWebElement City => this._driver.FindElement(By.Id("city"));
 
 
-        private SelectElement State => (SelectElement)this._driver.FindElement(By.Id("id_state"));
+        private IWebElement State => this._driver.FindElement(By.Id("id_state"));
 
         private IWebElement Zip => this._driver.FindElement(By.Id("postcode"));
 
-        private SelectElement Country => (SelectElement)this._driver.FindElement(By.Id("id_country"));
+        private IWebElement Country => this._driver.FindElement(By.Id("id_country"));
 
         private IWebElement Mobile_phone => this._driver.FindElement(By.Id("phone"));
         private IWebElement AddressName => this._driver.FindElement(By.Id("alias"));
 
+        private IWebElement Registerbutton => this._driver.FindElement(By.Id("submitAccount"));
 
-
+        private IWebElement CreateButton => this._driver.FindElement(By.Id("SubmitCreate"));
 
 
 
@@ -82,6 +83,21 @@ namespace AutomationProjectTestFramework.lib.pages
             return false;
         }
 
+        public void SubmitButton()
+        {
+            Registerbutton.Click();
+        }
+
+        public void GotoSignupForm()
+        {
+            CreateButton.Click();
+        }
+
+        public void checkMrTitle()
+        {
+            Title.Click();
+        }
+
         public void inputFullName(string input)
         {
             FullName.SendKeys(input);
@@ -97,15 +113,18 @@ namespace AutomationProjectTestFramework.lib.pages
         }
         public void inputDay()
         {
-            Day.SelectByIndex(2);
+            SelectElement daybox = new SelectElement(Day);
+            daybox.SelectByIndex(2);
         }
         public void inputMonth()
         {
-            Month.SelectByIndex(2);
+            SelectElement monthbox = new SelectElement(Month);
+            monthbox.SelectByIndex(2);
         }
         public void inputYear()
         {
-            Year.SelectByIndex(20);
+            SelectElement Yearbox = new SelectElement(Year);
+            Yearbox.SelectByIndex(20);
         }
         public void inputFname(string input)
         {
@@ -125,17 +144,20 @@ namespace AutomationProjectTestFramework.lib.pages
         }
         public void inputSate()
         {
-            State.SelectByIndex(2);
+            SelectElement statebox = new SelectElement(State);
+            statebox.SelectByIndex(1);
         }
         public void inputZip(string input)
         {
             Zip.SendKeys(input);
         }
-        public void inputCounty(string input)
+        public void inputCounty()
         {
-            Country.SelectByIndex(2);
+            SelectElement countrybox = new SelectElement(Country);
+            countrybox.SelectByIndex(1);
+            
         }
-        public void input(string input)
+        public void inputMoblilePhone(string input)
         {
             Mobile_phone.SendKeys(input);
         }
