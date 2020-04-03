@@ -2,13 +2,13 @@
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectShoppingCartPage
+    public class AutomationProjectShoppingCartPage
     {
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;
 
         //PROCEED TO CHECK OUT NAVIGATION
-        private IWebElement ProceedTocheckoutButton => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php?controller=order&amp;step=1"));
+        private IWebElement ProceedTocheckoutButton => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div/p[2]/a[1]/span"));
 
         //CONTINUE SHOPPING NAVIGATION
         private IWebElement ContinueShoppingButton => this._driver.FindElement(By.LinkText("http://automationpractice.com/index.php"));

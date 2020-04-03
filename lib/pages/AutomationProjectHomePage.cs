@@ -1,17 +1,19 @@
 ﻿using OpenQA.Selenium;
+using System.Collections.Generic;
+
 
 namespace AutomationProjectTestFramework.lib.pages
 {
-    class AutomationProjectHomePage
+    public class AutomationProjectHomePage
     {
         private IWebDriver _driver;
         private string _homePageUrl = AppConfigReader.BaseUrl;
 
-        //SHOPPING CART NAVIGATION
-        private IWebElement ShoppingCartButton => this._driver.FindElement(By.ClassName("shopping_cart"));
-
         //LOGIN NAVIGATION
         private IWebElement SignInButton => this._driver.FindElement(By.ClassName("login"));
+
+        //SEARCH FUNCTIONALITY
+        private IWebElement SearchBar => this._driver.FindElement(By.Id("search_query_top"));
 
         public AutomationProjectHomePage(IWebDriver driver)
         {
@@ -26,6 +28,12 @@ namespace AutomationProjectTestFramework.lib.pages
         public void ClickSignInLink()
         {
             SignInButton.Click();
+        }
+
+        public void SearchFunctionality(string product)
+        {
+            SearchBar.SendKeys(product);
+            SearchBar.Submit();
         }
     }
 }
