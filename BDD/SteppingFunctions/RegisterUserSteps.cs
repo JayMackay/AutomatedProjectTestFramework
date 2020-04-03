@@ -20,7 +20,7 @@ namespace AutomationProjectTestFramework.BDD.SteppingFunctions
         [Given(@"I have entered a valid email")]
         public void GivenIHaveEnteredAValidEmail()
         {
-            _automation.AutomationProjectRegister.InputEmail("abcd@work.com");
+            _automation.AutomationProjectRegister.InputEmail("abcde@work.com");
             _automation.AutomationProjectRegister.GotoSignupForm();
             Thread.Sleep(3000);
 
