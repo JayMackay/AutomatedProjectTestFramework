@@ -1,5 +1,7 @@
 ﻿using AutomationProjectTestFramework.lib.driver_config;
 using AutomationProjectTestFramework.lib.pages;
+using AutomationProjectTestFramework.lib;
+
 using OpenQA.Selenium;
 
 namespace AutomationProjectTestFramework.lib
