@@ -37,7 +37,7 @@ namespace AutomationProjectTestFramework.BDDTests
         [AfterScenario()]
         public void DisposeWebDriver()
         {
-            _automation.seleniumDriver.Dispose();
+            
             _automation.seleniumDriver.Quit();
         }
     }

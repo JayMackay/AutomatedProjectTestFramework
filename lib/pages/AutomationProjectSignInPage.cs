@@ -20,12 +20,12 @@ namespace AutomationProjectTestFramework.lib.pages
             _driver = driver;
         }
 
-        private void EnterValidEmail(string email)
+        public void EnterValidEmail(string email)
         {
             _usernameField.SendKeys(email);
         }
 
-        private void EnterValidPassword(string password)
+        public void EnterValidPassword(string password)
         {
             _passwordField.SendKeys(password);
         }

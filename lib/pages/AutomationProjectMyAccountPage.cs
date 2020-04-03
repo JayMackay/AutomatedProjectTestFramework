@@ -17,7 +17,7 @@ namespace AutomationProjectTestFramework.lib.pages
             _driver = driver;
         }
 
-        private void SearchProduct(string product)
+        public void SearchProduct(string product)
         {
             _searchBar.SendKeys(product);
             _searchBar.Submit();

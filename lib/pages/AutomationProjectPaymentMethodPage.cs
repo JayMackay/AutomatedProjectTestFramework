@@ -18,8 +18,8 @@ namespace AutomationProjectTestFramework.lib.pages
         {
             _driver = driver;
         }
-        
-        private void PayByBankWire()
+
+        public void PayByBankWire()
         {
             _bankWireTransfer.Click();
         }
