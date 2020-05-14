@@ -13,8 +13,10 @@ namespace AutomationProjectTestFramework.lib.pages
 
         //EMAIL INPUT
         private IWebElement EmailInput => this._driver.FindElement(By.Id("email_create"));
-        private IWebElement ErrorBox => this._driver.FindElement(By.Id("create_account_error"));
+        private IWebElement ErrorMessage => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div/div/div[1]/form/div/div[1]/ol/li"));
+        private IWebElement CreateAccountButton => this._driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div[3]/div/div/div[1]/form/div/div[3]/button/span"));
         private IWebElement FormCheck => this._driver.FindElement(By.XPath("//div[@class='form-group form-ok']"));
+        private IWebElement InvalidFormCheck => this._driver.FindElement(By.XPath("//div[@class='form-group form-error']"));
 
 
         public AutomationProjectRegisterPage(IWebDriver driver)
@@ -39,6 +41,11 @@ namespace AutomationProjectTestFramework.lib.pages
 
         }
 
+        public void CreateAccount()
+        {
+            CreateAccountButton.Click();
+        }
+
         public bool GoodEmailInput()
         {
             if (FormCheck.Enabled)
@@ -46,6 +53,20 @@ namespace AutomationProjectTestFramework.lib.pages
                 return true;
             }
             return false;
+        }
+
+        public bool BadEmailInput()
+        {
+            if (InvalidFormCheck.Enabled)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string RegistrationValidation()
+        {
+            return ErrorMessage.Text;
         }
     }
 }

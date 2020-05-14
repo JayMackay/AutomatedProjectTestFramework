@@ -11,6 +11,7 @@ namespace AutomationProjectTestFramework
     public class OrderCompletionSteps
     {
         private AutomatedProjectWebsite _automation;
+
         [Given(@"I am on the Order Summary Page")]
         public void GivenIAmOnTheOrderSummaryPage()
         {
@@ -41,14 +42,8 @@ namespace AutomationProjectTestFramework
         [Then(@"I am redirected to the Order Confirmation Page")]
         public void ThenIAmRedirectedToTheOrderConfirmationPage()
         {
-            Assert.That(_automation.automationProjectConfirmation.ConfirmOrderConfirmationMessage,
+            Assert.That(_automation.AutomationProjectConfirmation.ConfirmOrderConfirmationMessage,
                 Is.EqualTo("Your order on My Store is complete."));
-
-        }
-        [AfterScenario()]
-        public void DisposeWebDriver()
-        {
-            _automation.seleniumDriver.Dispose();
         }
     }
 }
