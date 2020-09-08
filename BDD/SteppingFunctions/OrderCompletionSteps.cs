@@ -18,8 +18,8 @@ namespace AutomationProjectTestFramework
             _automation = new AutomatedProjectWebsite("chrome");
             _automation.AutomationProjectHome.VisitHomePage();
             _automation.AutomationProjectHome.ClickSignInLink();
-            _automation.AutomationProjectSignIn.EnterValidEmail("mitclork@mitclork.com");
-            _automation.AutomationProjectSignIn.EnterValidPassword("mitclork");
+            _automation.AutomationProjectSignIn.EnterValidEmail("user.testing@gmail.com");
+            _automation.AutomationProjectSignIn.EnterValidPassword("admin");
             _automation.AutomationProjectSignIn.ConfirmationButton();
            Thread.Sleep(5000);
             _automation.AutomationProjectMyAccount.SearchProduct("dress");
