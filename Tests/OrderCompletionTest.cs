@@ -18,8 +18,8 @@ namespace AutomationProjectTestFramework.Tests
             //Order steps
             AutomatedProjectWebsite.AutomationProjectHome.VisitHomePage();
             AutomatedProjectWebsite.AutomationProjectHome.ClickSignInLink();
-            AutomatedProjectWebsite.AutomationProjectSignIn.EnterValidEmail("mitclork@mitclork.com");
-            AutomatedProjectWebsite.AutomationProjectSignIn.EnterValidPassword("mitclork");
+            AutomatedProjectWebsite.AutomationProjectSignIn.EnterValidEmail("user.testing@gmail.com");
+            AutomatedProjectWebsite.AutomationProjectSignIn.EnterValidPassword("Admin");
             AutomatedProjectWebsite.AutomationProjectSignIn.ConfirmationButton();
             AutomatedProjectWebsite.AutomationProjectMyAccount.SearchProduct("dress");
             AutomatedProjectWebsite.AutomationProjectDress.AddProduct();
